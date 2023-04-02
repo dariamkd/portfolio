@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "f63d401e-d904-4c39-91f2-8c8e8ad1a557",
+		"name": "Diplom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19291723"
+	},
+	"item": [
+		{
+			"name": "Request without token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.youtube.com/youtubei/v1/log_event?alt=json&key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8",
+					"protocol": "https",
+					"host": [
+						"www",
+						"youtube",
+						"com"
+					],
+					"path": [
+						"youtubei",
+						"v1",
+						"log_event"
+					],
+					"query": [
+						{
+							"key": "alt",
+							"value": "json"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "запрос GET с токеном",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-vimbox.skyeng.ru/api/v1/compilations/showcase",
+					"protocol": "https",
+					"host": [
+						"api-vimbox",
+						"skyeng",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"compilations",
+						"showcase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET without token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{myToken}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api-vimbox.skyeng.ru/api/v1/compilations/showcase",
+					"protocol": "https",
+					"host": [
+						"api-vimbox",
+						"skyeng",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"compilations",
+						"showcase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-vimbox.skyeng.ru/api/v1/compilations/showcase",
+					"protocol": "https",
+					"host": [
+						"api-vimbox",
+						"skyeng",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"compilations",
+						"showcase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-vimbox.skyeng.ru/api/v1/compilations/showcase",
+					"protocol": "https",
+					"host": [
+						"api-vimbox",
+						"skyeng",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"compilations",
+						"showcase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-vimbox.skyeng.ru/api/v1/compilations/showcase",
+					"protocol": "https",
+					"host": [
+						"api-vimbox",
+						"skyeng",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"compilations",
+						"showcase"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjEwMzM4NzM2LCJpZGVudGl0eSI6InRlc3QtbW9iaWxlMUBza3llbmcucnUiLCJpZGVudGl0eUxvZ2luIjpudWxsLCJpZGVudGl0eUVtYWlsIjoidGVzdC1tb2JpbGUxQHNreWVuZy5ydSIsImlkZW50aXR5UGhvbmUiOiIrNzk2NDU0ODIxNTUiLCJuYW1lIjoiXHUwNDIxXHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDQxXHUwNDNiXHUwNDMwXHUwNDMyIiwic3VybmFtZSI6Ilx1MDQyMFx1MDQzMFx1MDQzN1x1MDQzMlx1MDQzMFx1MDQzYlx1MDQ0Zlx1MDQzNVx1MDQzMiIsImVtYWlsIjoidGVzdC1tb2JpbGUxQHNreWVuZy5ydSIsInVpTGFuZ3VhZ2UiOiJydSIsImxvY2FsZSI6InJ1Iiwic2VydmljZUxvY2FsZSI6bnVsbCwidWFzIjozMCwiand0VHlwZSI6MSwianRpIjoiM1JXSGhzejVQdE95RXJxQ2VSUVFmVkFpd0d3bDIwR3EiLCJicmFuZCI6bnVsbCwiZXhwIjoxNjU0NjkzMzg2LCJhdmF0YXJVcmwiOiJodHRwczpcL1wvYXV0aC1hdmF0YXJzLXNreWVuZy5pbWdpeC5uZXRcLzEwMzM4NzM2XC8xZGQ5MzVhOC1kZjIxLTQ2YzYtYTAzYy0zNWU5MWUxZGVkZWY_YXV0bz1mb3JtYXQlMkNlbmhhbmNlJmZpdD1jcm9wJmg9MjAwJml4bGliPXBocC0yLjEuMSZxPTc1JnNhdD04JnNoYXJwPTEwJnZpYj04Jnc9MjAwIiwiYmlydGhkYXkiOiIxOTcxLTAzLTA1IiwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjUzOTk0NTc4LCJyb2xlcyI6WyJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1ZJTUJPWF9DUkVBVEVfU0NSRUVOSU5HX1RFU1QiXX0.1-mr0EfecHg7mBbLOoMWdJu2P-KdKMMPcgSIhP12AAxWnOAZp7BH3X30d7ShIq6SICHZBk29GjuxDnhlRrvJ3RxQwehZ16tPIOObsVS9t89inBMKKhNAgCpmTxxMIQdf48uN20LkCzILsrVFKGTKr5u7tKQE1ewAARzFAAqoaY2hCix5HKYzv5uXQ7etyV8MaGblmCswUE2xWxX9dWLTU4TZVC6hlmiYZ23zLY8TsRN0Nq75y0DfZFARgrjU0i3Ru0nSDrF_N_H7ZC1SKN1ILz_jsdZT5LeDPTaFJN7K0tJzdZZ3pM7NFZCS2NJxK6Pxh_vnZHI6a2uQ0g3YVU50PQFv307IuxxZDfTpUb-dsUZIh1Kpm9ywFXciXnRGhwENY-RI_lhQuT0oDVW__iO3nyLiG4xB4wWuF00ilVEyDWM1d2EvvC8vGcjj8c_QDbvGarxVRABaLoloXHuVhEuKW1qp5--FrMuV3t2QnqI4RQkAtpxbHbZmYg3Jdg4u70D13N6oQVlq85LzR3_eD9dvKvwMezV71emGstarECBLQRs-bZe8h_Its1dV5A8n1SQwP9Cacg5f2PYye9YFLP9QXVyJcyBW35FFWWTKG-HnGxv2DrV4WDX3UG1Nx936CvBx51zWgt6M74tQMFWgfVI0KVsdgkzVsvROlzwGCyIg3Ls"
+		}
+	]
+}

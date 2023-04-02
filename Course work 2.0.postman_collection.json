@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "c39b7dba-efe4-4259-b1f0-208016539dd9",
+		"name": "Course work 2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19291723"
+	},
+	"item": [
+		{
+			"name": "create present",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"presentId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#FFFF00\",\r\n\t\"color\": \"#000000\",\r\n\t\"description\": \"рыбатекст на 20 символов на кириллице\",\r\n\t\"endAt\": \"2022-03-18T14:00:00+01:00\",\r\n\t\"startAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"title\": \"СтОмАтОлОг KONDRATEVA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit present",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"startAtPresent\"\r",
+							"var value = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key,value);\r",
+							"\r",
+							"var key = \"presentId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#FFA500\",\r\n\t\"color\": \"#800000\",\r\n\t\"description\": \"НУ Я ТЕ ЩА НАРЕДАКТИРУЮ МАТЬ\",\r\n\t\"endAt\": \"2022-03-18T14:00:00+01:00\",\r\n\t\"id\": {{presentId}},\r\n\t\"oldStartAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"startAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"title\": \"СтОмАтОлОг KONDRATEVA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete present",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": {{presentId}},\r\n\t\"startAt\": \"{{startAtPresent}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/removePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create future",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"futureId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set (key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#F4F5F6\",\r\n\t\"color\": \"#81888D\",\r\n\t\"description\": \"https://www.pinterest.ru/pin/4785143346602454/\",\r\n\t\"endAt\": \"2022-04-03T00:30:00+02:00\",\r\n\t\"startAt\": \"2022-04-03T00:00:00+02:00\",\r\n\t\"title\": \"врач кондратьева\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit future",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"startAtFuture\"\r",
+							"var value = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key,value);\r",
+							"\r",
+							"var key = \"futureId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#F4F5F6\",\r\n\t\"color\": \"#81888D\",\r\n\t\"description\": \"https://www.pinterest.ru/pin/4785143346602454/\",\r\n\t\"endAt\": \"2022-03-28T00:30:00+02:00\",\r\n\t\"id\": {{futureId}},\r\n\t\"oldStartAt\": \"2022-04-03T00:00:00+02:00\",\r\n\t\"startAt\": \"2022-03-28T00:00:00+02:00\",\r\n\t\"title\": \"° врач кондратьева °\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete future",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": {{futureId}},\r\n\t\"startAt\": \"{{startAtFuture}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/removePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create past",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"pastId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set (key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#9ACD32\",\r\n\t\"color\": \"#006400\",\r\n\t\"description\": \"\",\r\n\t\"endAt\": \"2022-02-24T06:30:00+01:00\",\r\n\t\"startAt\": \"2022-02-24T06:00:00+01:00\",\r\n\t\"title\": \"сходить_к_врачу;помыть_кота;; KONDRATEVA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit past",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"startAtPast\"\r",
+							"var value = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key,value);\r",
+							"\r",
+							"var key = \"pastId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#FFF7C7\",\r\n\t\"color\": \"#FAC641\",\r\n\t\"description\": \"\",\r\n\t\"endAt\": \"2022-02-24T06:01:00+01:00\",\r\n\t\"id\": {{pastId}},\r\n\t\"oldStartAt\": \"2022-02-24T06:00:00+01:00\",\r\n\t\"startAt\": \"2022-02-24T06:00:00+01:00\",\r\n\t\"title\": \"врач в 14:00 за 12000 рублей\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete past",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": {{pastId}},\r\n\t\"startAt\": \"{{startAtPast}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/removePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create too long",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"fakeId\"\r",
+							"var value = pm.response.json().data.payload.id\r",
+							"pm.collectionVariables.set(key,value);\r",
+							"var key = \"startAtFake\"\r",
+							"var value = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key,value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#FF00FF\",\r\n\t\"color\": \"#6A5ACD\",\r\n\t\"description\": \"никакого дескрипшона, девочки\",\r\n\t\"endAt\": \"2022-03-20T14:00:00+01:00\",\r\n\t\"startAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"title\": \"KONDRATEVA на длительность\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create with too long tittle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"error\", function () {\r",
+							"    pm.response.to.have.body({\r",
+							"    \"data\": null,\r",
+							"    \"errors\": [\r",
+							"        {\r",
+							"            \"property\": \"title\",\r",
+							"            \"error\": {\r",
+							"                \"message\": \"Value must not exceed 40 character(s)\",\r",
+							"                \"code\": \"not_valid\",\r",
+							"                \"extra\": null\r",
+							"            }\r",
+							"        }\r",
+							"    ]\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"backgroundColor\": \"#FF00FF\",\r\n\t\"color\": \"#6A5ACD\",\r\n\t\"description\": \"никакого дескрипшона, девочки\",\r\n\t\"endAt\": \"2022-03-20T14:00:00+01:00\",\r\n\t\"id\": {{fakeId}},\r\n\t\"oldStartAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"startAt\": \"2022-03-18T13:30:00+01:00\",\r\n\t\"title\": \"Ввод СЛИШКОМ СЛИШКОМ СЛИИИШКОМ длинного названия\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[deleting of negative cases]",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{Mytoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": {{fakeId}},\r\n\t\"startAt\": \"{{startAtFake}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}/{{ver}}/{{tab}}/removePersonal",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{ver}}",
+						"{{tab}}",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "api-teachers.skyeng.ru",
+			"type": "string"
+		},
+		{
+			"key": "ver",
+			"value": "v2",
+			"type": "string"
+		},
+		{
+			"key": "tab",
+			"value": "schedule",
+			"type": "string"
+		},
+		{
+			"key": "Mytoken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "presentId",
+			"value": ""
+		},
+		{
+			"key": "futureId",
+			"value": ""
+		},
+		{
+			"key": "pastId",
+			"value": ""
+		},
+		{
+			"key": "startAtPresent",
+			"value": ""
+		},
+		{
+			"key": "startAtFuture",
+			"value": ""
+		},
+		{
+			"key": "startAtPast",
+			"value": ""
+		},
+		{
+			"key": "fakeId",
+			"value": ""
+		},
+		{
+			"key": "startAtFake",
+			"value": ""
+		}
+	]
+}
