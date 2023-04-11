@@ -44,7 +44,7 @@ Here's the <a href="https://drive.google.com/file/d/1vDN-WhNRcnhdTVzGe8aX7oHsCGB
 <a href="https://github.com/dariamkd/portfolio/blob/d265b28b316f680ba502a3ae6a4ca789e91286c0/Course%20work%202.0.postman_collection.json">#1</a>, <a href="https://github.com/dariamkd/portfolio/blob/d265b28b316f680ba502a3ae6a4ca789e91286c0/Diplom.postman_collection.json">#2</a>, 
 <a href="https://github.com/dariamkd/portfolio/blob/d265b28b316f680ba502a3ae6a4ca789e91286c0/homework%205.postman_collection.json">#3</a>.
   - and <a href="https://github.com/dariamkd/portfolio/blob/1e7f0e83b2ab151dab5dc2303079110961cec27b/files/api/soapuihomework">a result</a> of testing with SOAP UI.
-- I am currently learning **Java Automation**. Here you can find my <a href="https://github.com/dariamkd/portfolio/blob/f90b006b6b871bbed1cb2d20b390798a6948adb1/CoffeeMakerTest.java">first automation test example</a>.
-- I have worked with Apache products such as Jmeter and NetBeans. I love writing **stress tests**, you can find one  <a href="https://github.com/dariamkd/portfolio/blob/abf091d3bc013a5bc195e50f4f7f69e34af38cf9/files/homework7.jmx">here</a>.
+- Сurrently learning **Java Automation**. Here you can find my <a href="https://github.com/dariamkd/portfolio/blob/f90b006b6b871bbed1cb2d20b390798a6948adb1/CoffeeMakerTest.java">first automation test example</a>.
+- Experience with Apache products such as Jmeter and NetBeans. I love writing **stress tests**, you can find one  <a href="https://github.com/dariamkd/portfolio/blob/abf091d3bc013a5bc195e50f4f7f69e34af38cf9/files/homework7.jmx">here</a>.
 
   <a href=" "> </a>
