@@ -33,13 +33,13 @@ Here are some examples of my bug report lists:
 <a href="https://drive.google.com/file/d/1Mm_ARNUrDMXiK-LOMiuwzru4J6tbYNqA/view?usp=share_link">only functional</a>.
 
 and some bug reports I have created.
-<a href="https://drive.google.com/file/d/1pCBfe_JmHwesoD7MGWCD2mL7skB9g7Fe/view?usp=share_link">example 1<a/> , <a href="https://drive.google.com/file/d/1ulHaib0ZN8fqGT_aAgPfpiRq9gu4IwKh/view?usp=share_link">example 2</a>, <a href="https://drive.google.com/file/d/1uxpF8A5QVFekZ6s5VKjOwksz-AzDR2DU/view?usp=share_link">example 3</a>.
+<a href="https://drive.google.com/file/d/1pCBfe_JmHwesoD7MGWCD2mL7skB9g7Fe/view?usp=share_link">#1<a/> , <a href="https://drive.google.com/file/d/1ulHaib0ZN8fqGT_aAgPfpiRq9gu4IwKh/view?usp=share_link">#2</a>, <a href="https://drive.google.com/file/d/1uxpF8A5QVFekZ6s5VKjOwksz-AzDR2DU/view?usp=share_link">#3</a>.
 
 🔨 **Test cases examples:**
 - <a href="https://drive.google.com/file/d/1gdklw-5ZQWtMl8OOJ8oBGnsBdaqpie3Y/view?usp=share_link">for a food delivery</a>, 
 - for <a href="https://drive.google.com/file/d/1r3Se8DyyT1szvozg2B12k7DenmrwZIBA/view?usp=share_link">for a library</a> ;
 <a href="https://drive.google.com/file/d/1U6UH2FCHF0Lkt0Mqz8Gwhcx8QNMCIhJ1/view?usp=share_link">(and another list)</a>
-- for a learning platform: <a href="https://drive.google.com/file/d/1tlAzO5Rca3MROZ4Net9umYBe33AugE5j/view?usp=share_link">acceptance\smoke\API</a> ; functional <a href="https://drive.google.com/file/d/16bxJQRXGT9LV6CZITCaxKoesjFwfOkV2/view?usp=share_link">1</a> and <a href="https://drive.google.com/file/d/1Bt4KFTpGgoQz0tKiIB_erOS9B-Xf5nv8/view?usp=share_link">2</a>.
+- for a learning platform: <a href="https://drive.google.com/file/d/1tlAzO5Rca3MROZ4Net9umYBe33AugE5j/view?usp=share_link">acceptance\smoke\API</a> ; functional <a href="https://drive.google.com/file/d/16bxJQRXGT9LV6CZITCaxKoesjFwfOkV2/view?usp=share_link">#1</a> and <a href="https://drive.google.com/file/d/1Bt4KFTpGgoQz0tKiIB_erOS9B-Xf5nv8/view?usp=share_link">#2</a>.
 
 📋 **Test documentation**
 
